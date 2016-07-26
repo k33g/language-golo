@@ -1,0 +1,16 @@
+{
+  "name": "language-golo",
+  "main": "./lib/language-golo",
+  "version": "0.11.0",
+  "description": "Golo language package for Atom",
+  "activationEvents": [
+    "language-golo:hello",
+    "language-golo:salut"
+  ],
+  "repository": "https://github.com/k33g/language-golo",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "dependencies": {}
+}

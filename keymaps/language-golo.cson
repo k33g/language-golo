@@ -1,0 +1,3 @@
+'.workspace':
+  'ctrl-alt-h': 'language-golo:hello'
+  'ctrl-alt-s': 'language-golo:salut'

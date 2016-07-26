@@ -1,0 +1,65 @@
+'.source.golo':
+  'main':
+    'prefix': 'main'
+    'body':"""
+function main = |args| {
+  ${1:someCode}
+}
+"""
+  'module':
+    'prefix': 'm'
+    'body' :  'module ${1:moduleName}'
+  'import':
+    'prefix': 'i'
+    'body' :  'import ${1:importName}'
+  'structure':
+    'prefix': 's'
+    'body' :  'struct ${1:structureName} = { ${2:fieldName} }'
+  'let':
+    'prefix': 'l'
+    'body' :  'let ${1:constantName} = ${2:something}'
+  'var':
+    'prefix': 'v'
+    'body' :  'var ${1:variableName} = ${2:something}'
+  'dynamicObject':
+    'prefix': 'd'
+    'body' :  'DynamicObject()'
+  'define':
+    'prefix': 'df'
+    'body' :  'define("${1:methodName}", |this|)'
+  'print':
+    'prefix': 'p'
+    'body' :  'print(${1:something})'
+  'println':
+    'prefix': 'pl'
+    'body' :  'println(${1:something})'
+  'return':
+    'prefix': 'r'
+    'body' :  'return '
+  'augment':
+    'prefix': 'a'
+    'body' :  """
+augment ${1:packageName}.${2:className} {
+  function ${3:methodName} = |this| {}
+}
+"""
+  'augmentStructure':
+    'prefix': 'as'
+    'body' :  """
+augment ${1:moduleName}.types.${2:structureName} {
+  function ${3:methodName} = |this| {}
+}
+"""
+  'function':
+    'prefix': 'f'
+    'body': """
+function ${1:myFunction} = ${2:|${3:args}|} {
+
+}
+"""
+  'functionArrow':
+    'prefix': 'fl'
+    'body': 'function ${1:myFunction} = ${2:|${3:args}|} -> '
+  'lambda':
+    'prefix': 'lb'
+    'body' :  'let ${1:lambdaName} = ${2:|${3:args}|} -> ${4:code}'

@@ -1,0 +1,71 @@
+'fileTypes': [
+  'golo'
+]
+'foldingStartMarker': '/\\*\\*|\\{\\s*$'
+'foldingStopMarker': '\\*\\*/|^\\s*\\}'
+'name': 'golo'
+'patterns': [
+  {
+    'match': '\\b(case|default|do|else|for|goto|if|import|module|return|switch|while)\\b'
+    'name': 'keyword.control.golo'
+  }
+  {
+    'match': '\\b(try|catch|finally|throw|raise)\\b'
+    'name': 'keyword.control.catch-exception.java'
+  }
+  {
+    'captures':
+      '1':
+        'name': 'punctuation.definition.comment.golo'
+    'match': '(#).*$\\n?'
+    'name': 'comment.line.number-sign.golo'
+  }
+  {
+    'begin': '"'
+    'end': '"'
+    'name': 'string.quoted.double.golo'
+    'patterns': [
+      {
+        'match': '\\\\.'
+        'name': 'constant.character.escape.golo'
+      }
+    ]
+  }
+  {
+    'match': '\\b((0(x|X)[0-9a-fA-F]+)|([0-9]+(\\.[0-9]+)?))\\b'
+    'name': 'constant.numeric.golo'
+  }
+  {
+    'match': '\\b(DynamicObject|AdapterFabric|DynamicVariable|Thread|Observable|struct|function|local|var|let)\\b'
+    'name': 'storage.type.golo'
+  }
+  {
+    'match': '!|\\$|%|&|\\*|\\-\\-|\\-|\\+\\+|\\+|~|===|==|=|!=|!==|<=|>=|<<=|>>=|>>>=|<>|<|>|!|&&|\\|\\||\\?\\:|\\*=|(?<!\\()/=|%=|\\+=|\\-=|&=|\\^=|\\b(in|instanceof|new|delete|typeof|void)\\b'
+    'name': 'keyword.operator.golo'
+  }
+  {
+    'match': '\\btrue\\b'
+    'name': 'constant.language.boolean.true.golo'
+  }
+  {
+    'match': '\\bfalse\\b'
+    'name': 'constant.language.boolean.false.golo'
+  }
+  {
+    'match': '\\bnull\\b'
+    'name': 'constant.language.null.golo'
+  }
+  {
+    'match': '\\b(super|this)\\b'
+    'name': 'variable.language.golo'
+  }
+  {
+    'match': '\\b(println|print|: define|:define|:mixin|: mixin|augment|pimp|spawn|send|: onSet|: onChange|: onFail|:onSet|:onChange|:onFail|:get|: get|:set|: set)\\b'
+    'name': 'keyword.other.golo'
+  }
+  {
+    'match': '\\b(list|map|tuple|array|vector|set)\\b'
+    'name': 'support.class.golo'
+  }
+]
+'scopeName': 'source.golo'
